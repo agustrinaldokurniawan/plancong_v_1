@@ -80,7 +80,9 @@ app.get("/regist", function (req, res) {
 })
 
 var hotelSchema = new mongoose.Schema({
-    image: String
+    name: String,
+    image: String,
+    description: String
 });
 
 var Hotels = mongoose.model("Hotels", hotelSchema);
@@ -97,7 +99,9 @@ app.get("/hotel", function (req, res) {
 })
 
 var restoSchema = new mongoose.Schema({
-    image: String
+    name: String,
+    image: String,
+    description: String
 });
 
 var Resto = mongoose.model("Resto", restoSchema);
@@ -120,7 +124,9 @@ app.get("/resto", function (req, res) {
 })
 
 var recreationSchema = new mongoose.Schema({
-    image: String
+    name: String,
+    image: String,
+    description: String
 });
 
 var Recreation = mongoose.model("Recreation", recreationSchema);
