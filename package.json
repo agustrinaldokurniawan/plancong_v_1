@@ -1,0 +1,19 @@
+{
+  "name": "v1",
+  "version": "1.0.0",
+  "description": "Plancong v1",
+  "main": "server.js",
+  "scripts": {
+    "plancong": "nodemon server.js"
+  },
+  "author": "RPL Plancong Team",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^2.6.2",
+    "express": "^4.17.1",
+    "is-empty": "^1.2.0",
+    "mongoose": "^5.6.0",
+    "validator": "^11.0.0"
+  }
+}

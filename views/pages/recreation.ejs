@@ -1,0 +1,75 @@
+<% include ../partials/head %>
+<% include ../partials/header %>
+
+<body style="padding: 0; margin-top: 5rem">
+    <!-- Popular Hotel -->
+    <div class="bg-light">
+        <div class="container">
+            <div class="row text-center" style="padding: 3em 0; ;display: flex; flex-wrap: wrap;">
+                <div class="col-md-6 text-left">
+                    <h3>Traveller's Choice: Couple Recreation</h3>
+                </div>
+                <div class="col-md-6 text-right">
+                    <h5>READ MORE</h3>
+                </div>
+                <% collection.forEach(function(recreation) { %>
+                <div class="col-md-3 col-sm-6 mt-3">
+                    <div class="img-thumbnail">
+                        <img src="<%= recreation.image %>" style="width: 100%" alt="">
+                        <div class="caption">
+                            <h4>Image</h4>
+                        </div>
+                    </div>
+                </div>
+                <% }); %>
+            </div>
+        </div>
+    </div>
+    <!-- Luxury Hotel -->
+    <div>
+        <div class="container">
+            <div class="row text-center" style="padding: 3em 0; ;display: flex; flex-wrap: wrap;">
+                <div class="col-md-6 text-left">
+                    <h3>Traveller's Choice: Family Recreation</h3>
+                </div>
+                <div class="col-md-6 text-right">
+                    <h5>READ MORE</h3>
+                </div>
+                <% collection.forEach(function(recreation) { %>
+                <div class="col-md-3 col-sm-6 mt-3">
+                    <div class="img-thumbnail">
+                        <img src="<%= recreation.image %>" style="width: 100%" alt="">
+                        <div class="caption">
+                            <h4>Image</h4>
+                        </div>
+                    </div>
+                </div>
+                <% }); %>
+            </div>
+        </div>
+    </div>
+    <!-- Cheapest Hotel -->
+    <div class="bg-light">
+        <div class="container">
+            <div class="row text-center" style="padding: 3em 0; ;display: flex; flex-wrap: wrap;">
+                <div class="col-md-6 text-left">
+                    <h3>Traveller's Choice: Luxury Recreation</h3>
+                </div>
+                <div class="col-md-6 text-right">
+                    <h5>READ MORE</h3>
+                </div>
+                <% collection.forEach(function(recreation) { %>
+                <div class="col-md-3 col-sm-6 mt-3">
+                    <div class="img-thumbnail">
+                        <img src="<%= recreation.image %>" style="width: 100%" alt="">
+                        <div class="caption">
+                            <h4>Image</h4>
+                        </div>
+                    </div>
+                </div>
+                <% }); %>
+            </div>
+        </div>
+    </div>
+    <% include ../partials/footer %>
+</body>

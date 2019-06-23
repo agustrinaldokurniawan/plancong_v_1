@@ -1,0 +1,37 @@
+<!-- views/pages/login.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ../partials/head %>
+
+</head>
+
+<body>
+    <div class="container pt-5">
+        <div class="mx-auto card login-form" style="width: 450px">
+            <div class="card-body">
+                <form class="form-signin">
+                    <img class="mb-4 mx-auto d-block logo" src="http://via.placeholder.com/250x150" alt="Logo" width="90"
+                        height="90">
+
+                    <h3 id="mid" class="mb-3 font-weight-normal">Login</h3>
+
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" placeholder="jackson@gmail.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="pswd">Password:</label>
+                        <input type="password" class="form-control" name="password" id="pswd" placeholder="password">
+                    </div>
+                    <button type="submit" class="btn btn-block btn-primary">Login</button>
+                    <p id="mid" class="text-muted pt-5">Copyright Plancong @2019</p>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
