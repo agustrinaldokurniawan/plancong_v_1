@@ -2,66 +2,47 @@
 <% include ../partials/header %>
 
 <body style="padding: 0; margin-top: 5rem">
-    <!-- Popular Hotel -->
+    <!--Hotel -->
     <div class="bg-light">
         <div class="container">
             <div class="row text-center" style="padding: 3em 0; ;display: flex; flex-wrap: wrap;">
-                <div class="col-md-6 text-left">
+                <div class="col-md-12 text-left">
                     <h3>Traveller's Choice: Popular Hotel</h3>
                 </div>
-                <div class="col-md-6 text-right">
-                    <h5>READ MORE</h3>
-                </div>
                 <% collection.forEach(function(hotel) { %>
                 <div class="col-md-3 col-sm-6 mt-3">
                     <div class="img-thumbnail">
-                        <img src="<%= hotel.image %>" style="width: 100%" alt="">
-                        <div class="caption">
-                            <h4>Image</h4>
+                        <a href="/home" data-toggle="modal" data-target="#exampleModalCenter"> <img src="<%= hotel.image %>"
+                                style="width: 100%" alt=""></a>
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalCenterTitle">Hotel</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <h5>
+                                            <%= hotel.name %>
+                                        </h5>
+                                        <img src="<%= hotel.image %>" style="width: 100%" alt="">
+                                        <hr>
+                                        <h5>Description</h5>
+                                        <p>
+                                            <%= hotel.description %>
+                                        </p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <% }); %>
-            </div>
-        </div>
-    </div>
-    <!-- Luxury Hotel -->
-    <div>
-        <div class="container">
-            <div class="row text-center" style="padding: 3em 0; ;display: flex; flex-wrap: wrap;">
-                <div class="col-md-6 text-left">
-                    <h3>Traveller's Choice: Luxury Hotel</h3>
-                </div>
-                <div class="col-md-6 text-right">
-                    <h5>READ MORE</h3>
-                </div>
-                <% collection.forEach(function(hotel) { %>
-                <div class="col-md-3 col-sm-6 mt-3">
-                    <div class="img-thumbnail">
-                        <img src="<%= hotel.image %>" style="width: 100%" alt="">
-                        <div class="caption">
-                            <h4>Image</h4>
-                        </div>
-                    </div>
-                </div>
-                <% }); %>
-            </div>
-        </div>
-    </div>
-    <!-- Cheapest Hotel -->
-    <div class="bg-light">
-        <div class="container">
-            <div class="row text-center" style="padding: 3em 0; ;display: flex; flex-wrap: wrap;">
-                <div class="col-md-6 text-left">
-                    <h3>Traveller's Choice: Cheapest Hotel</h3>
-                </div>
-                <div class="col-md-6 text-right">
-                    <h5>READ MORE</h3>
-                </div>
-                <% collection.forEach(function(hotel) { %>
-                <div class="col-md-3 col-sm-6 mt-3">
-                    <div class="img-thumbnail">
-                        <img src="<%= hotel.image %>" style="width: 100%" alt="">
                         <div class="caption">
                             <h4>Image</h4>
                         </div>
